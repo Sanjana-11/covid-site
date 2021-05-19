@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Help</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b><center>Take a look</center></b></h4>
+    <img src="p3.jpg" width = 250, height = 200>
+    <img src="p4.jpg" width = 250, height = 200>
+    <img src="p5.jpg" width = 250, height = 200>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">INTRODUCTION</h1>
+      <p>COVID‐19, which was initiated regionally at Wuhan of China, has become a global pandemic by infecting people of almost all the world. Human civilizations are facing threat for their survival and livelihood. No country are getting any substantial relief and solution from this pandemic rather to convince their citizens to make aware and taking precaution by changing their living style. In view of this, this study attempted to assess the awareness, threat, symptoms and its prevention among people of India about the COVID‐19. A total of 522 responses from all over India were received. The respondents have adequate awareness for COVID‐19 outbreak and its preventive measures, out of total, 98% (513) answered that the virus spreads from one person to another, 95% (494) answered that the disease is caused by a virus. Peoples understand the importance of social distancing and other preventive measures prescribed by the government with good attitude for coronavirus. Peoples are following trusted sources for corona information, having confidence to defeat disease but showed their concern for corona threat, are aware about the virus, its common symptoms and prevention, govt. testing and medical facilities. Principal component analysis was used to identify the latent dimensions regarding people's preventive measures and was found that they are majorly adopting three methods, that is, lockdown, naturopathy and social distancing. This study will help government and peoples to understand and handle this coronavirus pandemic effectively and in prevention of COVID‐19, which is crucial for the awareness of society in coming time.
+    </p>
+    </div>
+    <div class="w3-third w3-container">
+        <img src = "p1.jpg" width = 300, height=400>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">WHAT CAN WE DO?</h1>
+      <ul>
+        <li><b>Get vaccinated from your nearest health center as soon as possible</b></li>
+        <li>Wash your hands often with soap and water for at least 20 seconds. Use an alcohol-based hand sanitizer that contains at least 60% alcohol if soap and water are not available.</li>
+        <li>Avoid touching your eyes, nose, and mouth with unwashed hands.</li>
+        <li>Avoid close contact with people who are sick.</li>
+        <li>Cover your cough or sneeze with a tissue, then throw the tissue in the trash.</li>
+        <li>Clean and disinfect frequently touched objects and surfaces.</li>
+        <li>Maintain at least 1 meter (3 feet) distance between yourself and other people, particularly those who are coughing, sneezing and have a fever.</li>
+        <li>Wear cloth face coverings in public settings where other social distancing measures are difficult to maintain.</li>
+        <li>Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover.</li>
+      </ul>  
+    </div>
+    <div class="w3-third w3-container">
+        <img src = "p2.jpg" width = 450, height=300>
+    </div>
+  </div>
+
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
